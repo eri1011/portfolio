@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/*--------------------------------------
+　タイトルの調整
+--------------------------------------*/
+@media screen and (max-width: 1040px) {
+  .heading__description {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    letter-spacing: -0.03em;
+  }
+}
+@media screen and (min-width: 530px) {
+  .br_contact:after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+@media screen and (min-width: 366px) and (max-width: 480px) {
+  .br_contact:after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+/*--------------------------------------
+　 フォームの装飾
+--------------------------------------*/
+.contact-form__name, .contact-form__email, .contact-form__subject {
+  margin-bottom: 30px;
+}
+.contact-form__inquiry_detail {
+  margin-bottom: 60px;
+}
+.contact-form div label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.contact-form div label .required {
+  margin-left: 10px;
+  color: #FF0000;
+}
+.contact-form div input[type=text], .contact-form div input[type=email], .contact-form div textarea {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: solid 1px #aaa;
+}
+.contact-form div textarea {
+  padding: 10px;
+  height: 360px;
+}
+.contact-form__submit {
+  display: inline-block;
+  transition: all 0.3s;
+  padding-top: 2px;
+  border-radius: 120px;
+  border-bottom: 5px solid #102254;
+  position: relative;
+  -webkit-appearance: none;
+}
+.contact-form__submit:hover {
+  margin-top: 3px;
+  transform: translateY(3px);
+  border-bottom: 2px solid #102254;
+}
+.contact-form__submit::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-right: 4px solid #FFF;
+  border-top: 4px solid #FFF;
+  border-radius: 2px;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 25px;
+}
+.contact-form__submit-btn {
+  width: 240px;
+  height: 65px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 120px;
+  color: #ffffff;
+  background-color: #1C398C;
+  font-size: 2.4rem;
+  font-family: urbane-rounded, heisei-maru-gothic-std, sans-serif;
+}
+.contact-form__submit-btn:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1041px) {
+  .contact {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+/*--------------------------------------
+　 確認画面の装飾
+--------------------------------------*/
+.confirm__description {
+  margin-bottom: 45px;
+}
+.confirm__detail-table {
+  width: 100%;
+  text-align: left;
+  margin: 0 auto 60px auto;
+}
+.confirm__detail-table-item {
+  border: solid 1px #aaa;
+}
+.confirm__detail-table-item--label {
+  width: 32%;
+  padding: 5px 10px;
+  font-weight: 800;
+  line-height: 2.4rem;
+  border-right: solid 1px #aaa;
+  background-color: #FEF9F5;
+}
+.confirm__detail-table-item--input {
+  width: 68%;
+  padding: 5px 10px;
+  line-height: 2.4rem;
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 481px) {
+  .confirm__detail-table {
+    max-width: 700px;
+  }
+  .confirm__detail-table-item--label {
+    width: 30%;
+  }
+  .confirm__detail-table-item--input {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1041px) {
+  .confirm__detail-table {
+    max-width: 900px;
+  }
+  .confirm__detail-table-item--label {
+    width: 24%;
+  }
+  .confirm__detail-table-item--input {
+    width: 76%;
+  }
+}
+/*--------------------------------------
+　 戻るボタンの装飾
+--------------------------------------*/
+.contact-form__return {
+  display: inline-block;
+  transition: all 0.3s;
+  padding-top: 2px;
+  border-radius: 120px;
+  border-bottom: 5px solid #888888;
+  position: relative;
+  margin-bottom: 30px;
+}
+.contact-form__return:hover {
+  margin-top: 3px;
+  transform: translateY(3px);
+  border-bottom: 2px solid #888888;
+}
+.contact-form__return::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-right: 4px solid #000;
+  border-top: 4px solid #000;
+  border-radius: 2px;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 25px;
+}
+.contact-form__return-btn {
+  width: 240px;
+  height: 65px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 120px;
+  color: #000000;
+  background-color: #aaaaaa;
+  font-size: 2.4rem;
+  font-family: urbane-rounded, heisei-maru-gothic-std, sans-serif;
+}
+.contact-form__return-btn:hover {
+  cursor: pointer;
+}
+.contact-form__btn-wrapper {
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 561px) {
+  .contact-form__return {
+    margin-bottom: 0;
+  }
+  .contact-form__btn-wrapper {
+    width: 100%;
+    max-width: 540px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/*--------------------------------------
+　 確認画面の装飾
+--------------------------------------*/
+.completion__description {
+  margin-bottom: 60px;
+}
+.completion__description > p {
+  margin-bottom: 10px;
+}
+.completion__return-btn {
+  display: inline-block;
+  width: 260px;
+  height: 65px;
+  margin: 0 auto;
+  padding-top: 15px;
+  border-radius: 120px;
+  border-bottom: 5px solid #102254;
+  position: relative;
+  color: #ffffff;
+  background-color: #1C398C;
+  font-size: 2.2rem;
+  transition: all 0.3s;
+}
+.completion__return-btn::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-right: 4px solid #FFF;
+  border-top: 4px solid #FFF;
+  border-radius: 2px;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 25px;
+}
+.completion__return-btn:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #102254;
+  opacity: 1;
+  cursor: pointer;
+}
+.completion__return-btn:visited {
+  color: #ffffff;
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,252 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  color: #333;
+  background-color: #f1f2f3;
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 56px;
+}
+
+@media (min-width: 961px) {
+  h1 {
+    font-size: 72px;
+    line-height: 72px;
+  }
+}
+h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+a {
+  color: #fff;
+}
+a:hover {
+  opacity: 0.5;
+}
+a:visited {
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.wrapper {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subttl-decorate {
+  color: #777;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .br:after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+/*--------------------------------------
+　 ヘッダー
+--------------------------------------*/
+.header {
+  background-color: #2d5829;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s;
+}
+.header.show {
+  opacity: 1;
+  visibility: visible;
+}
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  margin-top: 5px;
+}
+.header__nav-list {
+  display: none;
+}
+.header__opener {
+  position: absolute;
+  top: 12px;
+  right: 4%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.header__opener-span, .header__opener-span:before, .header__opener-span:after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+  content: "";
+  transition: all 0.7s;
+}
+.header__opener-span:before {
+  top: 9px;
+  left: 0;
+}
+.header__opener-span:after {
+  top: 18px;
+  left: 0;
+}
+.header__opener.active .header__opener-span {
+  transform: translateY(9px) rotate(-45deg);
+}
+.header__opener.active .header__opener-span:before {
+  transform: translateY(-9px) rotate(45deg);
+  opacity: 0;
+}
+.header__opener.active .header__opener-span:after {
+  transform: translateY(-18px) rotate(90deg);
+}
+.header__opener-text {
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  top: 26px;
+  width: 40px;
+}
+
+@media (min-width: 1081px) {
+  .header {
+    height: 80px;
+  }
+  .header__logo {
+    margin-top: 15px;
+  }
+  .header__nav-list {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 25px;
+  }
+  .header__nav-list--item {
+    margin-left: 30px;
+  }
+  .header__opener {
+    display: none;
+  }
+}
+/*--------------------------------------
+　 ドロワーメニュー
+--------------------------------------*/
+.header__opener-nav {
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  right: -120%;
+  width: 70%;
+  height: calc(100vh - 60px);
+  background-color: #2d5829;
+  transition: all 0.7s;
+}
+.header__opener-nav.panelactive {
+  right: 0;
+}
+.header__opener-nav-list {
+  margin-top: 30px;
+  text-align: right;
+}
+.header__opener-nav-list--menu {
+  margin-bottom: 10px;
+  padding: 0 6%;
+  font-size: 20px;
+  line-height: 30px;
+}
+.header__opener-nav-list--menu:last-child {
+  margin-bottom: 0;
+}
+.header__opener-nav-list--menu a {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 601px) {
+  .header__opener-nav {
+    width: 40%;
+  }
+  .header__opener-nav-list--menu {
+    padding: 0 10%;
+  }
+}
+/*--------------------------------------
+　 フッター
+--------------------------------------*/
+.footer {
+  padding: 30px 0;
+  background-color: #2d5829;
+}
+.footer__nav-logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+}
+.footer__nav-list {
+  padding: 15px 0 30px;
+  list-style: none;
+  color: #fff;
+}
+.footer small {
+  color: #fff;
+}
+
+@media (min-width: 601px) {
+  .footer__nav-logo {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: left;
+  }
+  .footer__nav-list {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+  }
+  .footer small {
+    color: #fff;
+  }
+}/*# sourceMappingURL=common.css.map */
